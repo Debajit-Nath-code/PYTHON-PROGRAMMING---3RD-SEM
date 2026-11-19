@@ -1,34 +1,24 @@
-print("Choose an operation:")
-print(" + : Addition")
-print(" - : Subtraction")
-print(" * : Multiplication")
-print(" / : Division")
+print("=" * 30)
+print("          CALCULATOR")
+print("=" * 30)
+val_1 = float(input("Enter first number: "))
+op = input("Enter operator (+, -, *, /): ")
+val_2 = float(input("Enter second number: "))
 
-try:
-    num1 = float(input("\nEnter the first number: "))
-    operator = input("Enter an operator +, -, *, / : ")
-    num2 = float(input("Enter the second number: "))
-    
-    if operator == '+':
-        result = num1 + num2
-        print(f"\nResult: {num1} + {num2} = {result}")
-        
-    elif operator == '-':
-        result = num1 - num2
-        print(f"\nResult: {num1} - {num2} = {result}")
-        
-    elif operator == '*':
-        result = num1 * num2
-        print(f"\nResult: {num1} * {num2} = {result}")
-        
-    elif operator == '/':
-        if num2 == 0:
-            print("\nError: Cannot divide by zero!")
-        else:
-            result = num1 / num2
-            print(f"\nResult: {num1} / {num2} = {result}")        
+if op == "+":
+    output = val_1 + val_2
+elif op == "-":
+    output = val_1 - val_2
+elif op == "*":
+    output = val_1 * val_2
+elif op == "/":
+    if val_two != 0:
+        output = val_1 / val_2
     else:
-        print("\nError: Invalid operator selected.")
+        output = "Cannot divide by zero"
+else:
+    output = "Invalid operator"
 
-except ValueError:
-    print("\nError: Please enter valid numbers.")
+print("-" * 30)
+print("Result:", output)
+print("=" * 30)
