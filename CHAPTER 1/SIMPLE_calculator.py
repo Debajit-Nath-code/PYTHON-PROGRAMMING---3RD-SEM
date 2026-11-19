@@ -1,16 +1,12 @@
-print("--- Welcome to the Simple Python Calculator ---")
 print("Choose an operation:")
 print(" + : Addition")
 print(" - : Subtraction")
 print(" * : Multiplication")
 print(" / : Division")
-print(" //: Floor Division")
-print(" % : Remainder")
-print(" **: Power")
 
 try:
     num1 = float(input("\nEnter the first number: "))
-    operator = input("Enter an operator (+, -, *, /, //, %, **): ").strip()
+    operator = input("Enter an operator +, -, *, / : ")
     num2 = float(input("Enter the second number: "))
     
     if operator == '+':
@@ -30,26 +26,7 @@ try:
             print("\nError: Cannot divide by zero!")
         else:
             result = num1 / num2
-            print(f"\nResult: {num1} / {num2} = {result}")
-            
-    elif operator == '//':
-        if num2 == 0:
-            print("\nError: Cannot divide by zero!")
-        else:
-            result = num1 // num2
-            print(f"\nResult: {num1} // {num2} = {result}")
-            
-    elif operator == '%':
-        if num2 == 0:
-            print("\nError: Cannot divide by zero!")
-        else:
-            result = num1 % num2
-            print(f"\nResult: {num1} % {num2} = {result}")
-            
-    elif operator == '**':
-        result = num1 ** num2
-        print(f"\nResult: {num1} raised to the power of {num2} = {result}")
-        
+            print(f"\nResult: {num1} / {num2} = {result}")        
     else:
         print("\nError: Invalid operator selected.")
 
